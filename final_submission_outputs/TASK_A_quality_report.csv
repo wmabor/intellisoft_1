@@ -1,0 +1,20 @@
+category,dataset,issue,affected_records,recommended_action,reason
+Duplicates,visits,Exact duplicate visit rows,0,Drop exact duplicates,Exact duplicates inflate visit volume.
+Duplicates,referrals,Exact duplicate referral rows,0,Drop exact duplicates,Exact duplicates inflate referral volume.
+Reference table integrity,chus,Duplicate CHU IDs,2,Create canonical CHU lookup,Duplicate lookup IDs can multiply rows during joins.
+Missing values,visits,Missing required visit fields,0,Drop from analytical joins and flag,The record cannot be reliably interpreted or joined.
+Missing values,referrals,Missing required referral fields,0,Drop from linked analysis and flag,The referral cannot be reliably linked or interpreted.
+Invalid dates,visits,Missing or non-2025 visit dates,103,Exclude from 2025 analysis,The requested analysis covers calendar year 2025.
+Invalid dates,referrals,Missing or non-2025 referral dates,0,Exclude from 2025 analysis,The requested analysis covers calendar year 2025.
+Invalid dates,referrals,Completion before referral date,6,Set completion date to missing and flag,A referral cannot be completed before it is generated.
+Categorical coding,visits,Inconsistent visit module labels,563,Normalize module labels,Equivalent workflows should be grouped together.
+Categorical coding,referrals,Inconsistent referral module labels,0,Normalize module labels,Equivalent workflows should be grouped together.
+Invalid values,visits,Invalid MUAC values,64,Set MUAC to missing and flag,Values such as 0 or 999 are likely entry errors.
+Invalid values,visits,Invalid ANC contact numbers,0,Set invalid value to missing,ANC contact numbers should be positive.
+Invalid values,visits,Invalid PNC visit numbers,0,Set invalid value to missing,PNC visit numbers should be positive.
+Invalid values,visits,Invalid RDT values,0,Set invalid value to missing,RDT indicators require controlled values.
+Cross-field consistency,visits,ACT dispensed despite negative or missing RDT,0,Flag for data-team or clinical review,This may be clinically appropriate but needs review.
+Referential integrity,visits,Unmatched CHU IDs in visits,0,Flag and exclude unresolved CHU joins,Incorrect CHU joins can misattribute results.
+Referential integrity,visits,Unmatched CHW IDs in visits,0,Flag and exclude unresolved CHW joins,The visit cannot be assigned to a valid CHW.
+Referential integrity,visits,Unmatched client IDs in visits,80,Retain for aggregate counts but flag,The visit event may still be valid.
+Referential integrity,referrals,Unmatched visit IDs in referrals,0,Exclude from linked referral analysis,The referral cannot be traced to a visit.

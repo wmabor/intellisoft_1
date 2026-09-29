@@ -1,0 +1,179 @@
+
+TASK A — DATA QUALITY SUMMARY
+
+I began the assessment by checking the quality of the six program tables
+before calculating any performance indicators. I preserved the raw data
+and worked with copies of the visits and referrals tables.
+
+The main quality checks covered duplicate records, missing required fields,
+invalid dates, inconsistent categorical coding, invalid module-specific
+values, cross-field inconsistencies, referential integrity, and duplicate
+CHU reference IDs.
+
+The quality report documented the following main issues:
+
+- 103 visits had missing or non-2025 visit dates.
+- 6 referrals had completion dates earlier than their referral dates.
+- 563 visit records had inconsistent module labels.
+- 64 visits had implausible MUAC values.
+- 80 visits referenced client IDs that were not found in clients.csv.
+- Duplicate logical CHU IDs were identified after trimming spaces and
+  standardizing ID capitalization.
+
+I normalized identifiers by removing extra spaces and converting them to
+uppercase. I standardized module names and referral outcomes. Exact
+duplicates were removed. Impossible numeric values were set to missing
+rather than guessed or imputed. Records outside the 2025 assessment period
+were excluded from the main 2025 analytical datasets but retained as
+exceptions. Unknown referral outcomes were not counted as completed.
+
+The cleaned datasets used for later analysis contained:
+
+- 26,617 cleaned 2025 visits.
+- 1,035 cleaned 2025 referrals.
+
+
+TASK B — KEY ANALYSIS RESULTS
+
+The cleaned data contained 5,481 Malaria_Case visits.
+
+RDT positivity was calculated only among visits where an RDT was actually
+recorded as positive or negative. There were 4,976 visits
+with an RDT result and 1,781 positive RDT results.
+
+The overall RDT positivity rate was:
+
+1,781 / 4,976
+= 35.8%
+
+ACT dispensing was calculated among RDT-positive cases only. There were
+1,657 positive cases with ACT dispensed out of
+1,781 positive cases.
+
+The ACT dispensing rate among positive RDT cases was:
+
+1,657 / 1,781
+= 93.0%
+
+There were 1,035 referrals in total:
+
+- 664 completed referrals.
+- 213 not-completed referrals.
+- 158 referrals with unknown outcomes.
+
+Referral completion was defined as completed referrals divided by all
+referrals. Unknown outcomes remained in the denominator but were not counted
+as completed.
+
+The overall referral completion rate was:
+
+664 / 1,035
+= 64.2%
+
+The county with the highest referral completion rate was
+Machakos at
+70.8%.
+
+The county with the lowest referral completion rate was
+Bungoma at
+58.6%.
+
+By module, referral completion was highest for
+Malaria_Case at
+67.2% and lowest for
+PNC at
+60.3%.
+
+The five CHVs with the highest total visit volume were:
+
+Kiplagat Mburu, Kiplagat Kilonzo, Wanjiru Njoroge, Mutua Simiyu, Wairimu Kilonzo
+
+Their average visits per active month were calculated using the number of
+distinct months in which each CHV recorded at least one visit. I did not
+divide every CHV's annual visits by 12 because that would unfairly penalize
+CHVs who were active for fewer months.
+
+
+TASK C — STATISTICAL REASONING
+
+Because the exact refresher-training dates were not included in the data,
+August was used as an analytical breakpoint. Danger-sign detection was
+compared between January-July and August-December.
+
+The largest increase in danger-sign detection occurred in
+Nyeri, with a change of
+5.67
+percentage points.
+
+The analysis also compared the before-and-after change with normal
+month-to-month variation during the pre-period. This helps distinguish a
+possible intervention signal from ordinary random fluctuation.
+
+The likely training counties identified under the statistical rule were:
+
+Nyeri, Kilifi
+
+This result should be interpreted as evidence of a possible training effect,
+not proof of causation. The exact training dates, training attendance, and
+supervision records should be confirmed with the program team.
+
+Malaria visit volume peaked in November, with
+712 visits.
+
+Possible explanations for monthly variation include seasonal malaria
+transmission, rainfall, care-seeking behavior, outreach scheduling,
+availability of CHVs, supply availability, and differences in reporting.
+
+
+TASK D — MANAGEMENT SUMMARY
+
+The program recorded substantial community-level activity during 2025.
+Malaria visits were high, RDT positivity was measurable among tested
+visits, and ACT dispensing among positive cases was generally strong.
+
+However, the analysis also identified important documentation gaps. Missing
+RDT results limit confidence in the malaria indicators, while unknown
+referral outcomes reduce visibility of what happened after a referral.
+
+Several counties showed improved danger-sign detection after the August
+breakpoint, but this should be validated against official training dates
+and other operational information.
+
+Referral performance varied across counties and modules. These differences
+should be interpreted together with referral volume and the number of
+unknown outcomes rather than percentages alone.
+
+The top CHVs recorded substantially higher visit volumes than many others.
+This may indicate strong productivity, but it may also reflect differences
+in assigned households, population size, geography, or workload allocation.
+
+
+TASK D — ACTIONABLE RECOMMENDATIONS
+
+1. Strengthen referral follow-up and outcome documentation, especially in
+   counties with lower completion rates or many unknown outcomes.
+
+2. Confirm the exact refresher-training dates and compare official trained
+   counties with counties that did not receive the training.
+
+3. Investigate malaria visits without recorded RDT results and clarify
+   whether the missing result means the test was not done or was not recorded.
+
+4. Prepare RDT kits, ACT supplies, supervision, and CHV coverage before
+   months with higher malaria visit volume.
+
+5. Review CHV workload allocation before using total visit volume as a
+   performance judgment. Consider household population, geography, and the
+   number of assigned households.
+
+
+TASK D — DATA-TEAM HANDOFF QUESTIONS
+
+- What were the exact dates of the refresher training?
+- Which counties and CHVs attended the training?
+- Does a missing RDT result mean that testing was not done or that the
+  result was not recorded?
+- Who is responsible for updating referral outcomes?
+- How should referral records with a completion date but no outcome be treated?
+- Which CHU record is authoritative where duplicate normalized CHU IDs exist?
+- Are all CHVs assigned similar household populations and geographic areas?

@@ -1,0 +1,13 @@
+county,period,total_visits,detected_danger_signs,detection_rate,detection_percent
+Bungoma,August onward,698,42,0.06017191977077364,6.02
+Bungoma,Before August,977,64,0.06550665301944729,6.55
+Kakamega,August onward,1345,74,0.0550185873605948,5.5
+Kakamega,Before August,1584,98,0.06186868686868687,6.19
+Kilifi,August onward,796,82,0.10301507537688442,10.3
+Kilifi,Before August,999,47,0.04704704704704705,4.7
+Kisumu,August onward,599,66,0.11018363939899833,11.02
+Kisumu,Before August,844,49,0.058056872037914695,5.81
+Machakos,August onward,353,24,0.0679886685552408,6.8
+Machakos,Before August,473,20,0.042283298097251586,4.23
+Nyeri,August onward,1136,124,0.10915492957746478,10.92
+Nyeri,Before August,1447,76,0.0525224602626123,5.25

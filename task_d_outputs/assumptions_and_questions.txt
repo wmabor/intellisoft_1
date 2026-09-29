@@ -1,0 +1,30 @@
+
+ASSUMPTIONS AND QUESTIONS FOR DATA TEAM
+
+1. The assessment year was treated as January 1, 2025 to December 31, 2025.
+
+2. Unknown referral outcomes were included in the denominator but not counted
+   as completed.
+
+3. RDT positivity was calculated only among malaria visits with a recorded
+   positive or negative RDT result.
+
+4. ACT dispensing was calculated only among positive RDT cases.
+
+5. August was used as the approximate training boundary because the data showed
+   a sustained increase in danger-sign detection from August onward in some counties.
+   The actual training dates should be confirmed.
+
+6. Danger-sign detection was assessed across ANC, PNC, and Malaria_Case visits.
+
+7. The malaria seasonality analysis is exploratory. Visit volume may reflect disease
+   seasonality, care-seeking, CHV availability, outreach scheduling, or reporting intensity.
+
+8. The CHU reference table contains duplicate logical CHU IDs after normalization.
+   The data team should confirm the authoritative CHU record before production reporting.
+
+9. The data team should confirm whether missing RDT results mean the test was not done
+   or whether the result was simply not recorded.
+
+10. The data team should confirm whether referral outcomes are expected to be updated
+    by CHVs, facilities, supervisors, or another reporting system.

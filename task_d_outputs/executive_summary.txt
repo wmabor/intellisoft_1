@@ -1,0 +1,35 @@
+
+EXECUTIVE SUMMARY — COMMUNITY HEALTH WORKER PROGRAM
+
+Program activity:
+- The program recorded 5,481 Malaria_Case visits in 2025.
+- RDT positivity was 35.8% among visits where an RDT was done.
+- ACT dispensing among positive RDT cases was 93.0%.
+
+Referral performance:
+- There were 1,035 referrals overall.
+- The overall referral completion rate was 64.2%.
+- Referral completion was highest in Machakos 
+  at 70.8%.
+- Referral completion was lowest in Bungoma 
+  at 58.6%.
+- Completion was highest for Malaria_Case referrals 
+  and lowest for PNC referrals.
+
+Danger-sign detection:
+- Danger-sign detection increased most in Nyeri,
+  with a change of 5.67
+  percentage points after August.
+- Counties identified as likely receiving refresher training were:
+  Nyeri, Kilifi.
+
+Seasonality:
+- Malaria visit volume peaked in November, with
+  712 visits.
+- This pattern may reflect seasonal malaria transmission, increased care-seeking,
+  or changes in outreach and reporting intensity.
+
+Management message:
+The program is generating substantial community-level activity, but referral follow-up
+and documentation remain important improvement areas. The strongest apparent improvement
+in danger-sign detection occurred after August in the likely training counties.

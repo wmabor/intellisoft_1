@@ -1,0 +1,5 @@
+training_group,period,total_visits,detected_danger_signs,detection_rate,detection_percent
+Likely trained,August onward,1932,206,0.10662525879917184,10.66
+Likely trained,Before August,2446,123,0.05028618152085037,5.03
+Other counties,August onward,2995,206,0.0687813021702838,6.88
+Other counties,Before August,3878,231,0.05956678700361011,5.96

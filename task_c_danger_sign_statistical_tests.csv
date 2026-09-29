@@ -1,0 +1,7 @@
+county,total_visits_August onward,total_visits_Before August,detected_danger_signs_August onward,detected_danger_signs_Before August,detection_percent_August onward,detection_percent_Before August,change_percentage_points,z_score,p_value,pre_period_monthly_sd_percent,change_vs_monthly_variation,statistically_significant,larger_than_normal_monthly_variation,likely_training_county
+Nyeri,1136.0,1447.0,124.0,76.0,10.92,5.25,5.67,5.35,0.0,2.22,2.55,True,True,True
+Kilifi,796.0,999.0,82.0,47.0,10.3,4.7,5.6,4.56,0.0,1.29,4.33,True,True,True
+Kisumu,599.0,844.0,66.0,49.0,11.02,5.81,5.21,3.6,0.0003,2.72,1.92,True,False,False
+Machakos,353.0,473.0,24.0,20.0,6.8,4.23,2.57,1.63,0.1036,2.69,0.96,False,False,False
+Kakamega,1345.0,1584.0,74.0,98.0,5.5,6.19,-0.69,-0.79,0.432,1.39,-0.49,False,False,False
+Bungoma,698.0,977.0,42.0,64.0,6.02,6.55,-0.53,-0.44,0.6584,2.33,-0.23,False,False,False
